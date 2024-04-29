@@ -1,0 +1,15 @@
+{
+	"account_id": "357XWFUBAZCHXHZNLE2NIUCRHM",
+	"entrypoint": [
+		"ngrok"
+	],
+	"credentials": [
+		{
+			"plugin": "ngrok",
+			"credential_type": "credentials",
+			"usage_id": "credentials",
+			"vault_id": "4zlpfk6gj24cbm3ljnhrq6cnnu",
+			"item_id": "wvuejwwgyhtzieaqhnpw4og7xq"
+		}
+	]
+}

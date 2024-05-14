@@ -41,6 +41,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Use playerctl to play/pause media
+bindsym XF86AudioPlay exec playerctl -p spotify play-pause
+bindsym XF86AudioStop exec playerctl -p spotify stop
+bindsym XF86AudioPrev exec playerctl -p spotify previous
+bindsym XF86AudioNext exec playerctl -p spotify next
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -205,8 +211,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #		status_command polybar
 #}
 
-bindsym $mod+Ctrl+p exec maim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H-%M-%S').png
-bindsym $mod+Ctrl+Shift+p exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+Ctrl+p exec killall picom && maim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H-%M-%S').png && picom &
+bindsym $mod+Ctrl+Shift+p exec killall picom && maim -s | xclip -selection clipboard -t image/png && picom &
 
 ###
 # Pretty Bits

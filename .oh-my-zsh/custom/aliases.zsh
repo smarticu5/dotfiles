@@ -2,6 +2,8 @@ alias keebuk="setxkbmap gb"
 alias keebus="setxkbmap us"
 
 alias vim=nvim
+alias cd=z
+alias cat=batcat
 
 alias job="source $HOME/scripts/job.sh"
 # Commenting out as this isn't a VM

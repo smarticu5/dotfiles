@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/usr/local/go/bin:/home/iain/go/bin
 
+export PATH=$PATH:/home/iain/.local/bin
 eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

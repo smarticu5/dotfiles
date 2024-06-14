@@ -17,16 +17,18 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --image ~/Pictures/Wallpapers/01.png
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen --lock
+# This the below was the original, ish, and it's working as expected. That includes sleep and locking. 
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password -c 000000
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen --lock & 
 # ~/scripts/lock.sh
 
 # Need some audio stuff
 #exec --no-startup-id pulseaudio --start
 
 # Lock shortcut
-bindsym $mod+x exec betterlockscreen --lock
+bindsym $mod+x exec loginctl lock-session
 # Sleep shortcut
+
 bindsym $mod+Shift+x exec systemctl suspend
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -122,7 +124,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:Browser"
-set $ws2 "2:Terminal"
+set $ws2 "2:Termina"
 set $ws3 "3:Code"
 set $ws4 "4:Obsidian"
 set $ws5 "5:Stoof"
@@ -276,10 +278,10 @@ smart_gaps on
 
 # Startup Applications
 exec --no-startup-id i3-msg 'workspace 1:Browser; exec google-chrome'
-exec --no-startup-id i3-msg 'workspace 2:Terminal; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace 4:Obsidian; exec obsidian'
-exec --no-startup-id i3-msg 'workspace 5:Stoof; exec spotify'
-exec --no-startup-id i3-mgs 'workspace 5:Stoof; exec todoist'
+# exec --no-startup-id i3-msg 'workspace 2:Terminal; exec i3-sensible-terminal'
+# exec --no-startup-id i3-msg 'workspace 4:Obsidian; exec obsidian'
+# exec --no-startup-id i3-msg 'workspace 5:Stoof; exec spotify'
+# exec --no-startup-id i3-mgs 'workspace 5:Stoof; exec todoist'
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 
 # Window-specific behaviours

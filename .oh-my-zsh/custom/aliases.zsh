@@ -12,3 +12,5 @@ alias noderoot="kubectl run privpod --rm -it --image alpine --privileged --overr
 alias kdo="kubectl --dry-run=client -o yaml"
 alias whaler="docker run -t --rm -v /var/run/docker.sock:/var/run/docker.sock:ro pegleg/whaler -sV=1.36"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
+
+alias tmux="TERM=xterm-256color tmux"

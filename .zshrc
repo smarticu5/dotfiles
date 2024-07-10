@@ -11,8 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Enable plugins
-source /home/iain/.config/op/plugins.sh
-
 plugins=(zsh-syntax-highlighting zsh-autosuggestions git kubectl)
 
 # Adding zsh-completions in here as the normal install is broken:

@@ -1,0 +1,15 @@
+[user]
+    name = Iain Smart
+    email = iain.smart@control-plane.io
+    signkey = 51BC8D8A5C382891!
+[commit]
+    gpgsignkey = true
+    gpgsign = true
+    template = /home/iain/.config/git/commit.txt
+[init]
+    defaultBranch = main
+[core]
+    editor = vim
+    excludesfile = /home/iain/.gitignore
+[push]
+    autoSetupRemote = true

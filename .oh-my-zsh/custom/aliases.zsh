@@ -14,3 +14,4 @@ alias whaler="docker run -t --rm -v /var/run/docker.sock:/var/run/docker.sock:ro
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 
 alias tmux="TERM=xterm-256color tmux"
+alias workernodes="gcloud compute ssh kubernetes-worker-$(echo $TMUX_PANE | cut -d "%" -f 2)"

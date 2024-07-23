@@ -1,5 +1,6 @@
- git config user.name "Iain Smart"
- git config user.email "i.smart94@gmail.com"
- git config gpg.format ssh
- git config gpg.ssh.program "/opt/1Password/op-ssh-sign"
- git config user.signingkey /home/iain/.ssh/id_rsa.pub
+git config user.name "Iain Smart"
+git config user.email "i.smart94@gmail.com"
+git config gpg.format ssh
+git config gpg.ssh.program "/opt/1Password/op-ssh-sign" 
+git config user.signingkey "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZ95JCxAr34XEiYFeNnsEWZGePYt2aAwqxeNs5YRoePcs6qEh0yDyaX76JOCFCw88J506pF1R6WpB2kjSYVwyEGIIU67vDnpeSxN0vPbGLkjDAKVSPKC8/65Zuo/MVN/1Yfh4rcSozTWCGTYeis+q9xfWvJVzpNrFkki8FS00YLI55OMjkBEbdGQTHKUJSZMliiCj6tjneJG7+VRELHHEnuY6LvhCCy1TZliyiReu8sq3nWzcPPlKJpX9wZNBukrKR/lO+8GCd/DmBxRM+U/cJ6gdmjU6CtZ3iMSjZoJCcip6XCr7D/LTFjh4T0H1ZOXqM3G+As6mYWTONXUex3feLATgcHhZ8Rp7SJCQj5jqQS41JKgeabrxdsUuaOCM6U31aGJVzlpooABd/yLmytupPq9OiBcp3ZOmcQzaFG38k2ldgKtyKl90L0b/ZOC4ff2u73LVAAcKy7xY3lIZWv3Q2Bl3AYhtiT+Io40CcK7Vj3TVVy1A5Ps053wddYG0J0dU="
+

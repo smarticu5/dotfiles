@@ -74,12 +74,24 @@ alias ls='ls --color'
 alias c='clear'
 
 # Shell integrations
-eval "$(fzf --zsh)"
+# eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
+# History
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
+bindkey $terminfo[kcuu1] history-beginning-search-backward-end
+bindkey $terminfo[kcud1] history-beginning-search-forward-end
+
+bindkey $terminfo[kLFT5] backward-word       # ctrl+left
+bindkey $terminfo[kRIT5] emacs-forward-word  # ctrl+right
+
+# Pip PATH
+export PATH=~/.local/bin:$PATH
 
 # Go PATH
 export PATH=~/go/bin/:$PATH
 
+export PATH="$HOME/.local/bin:$PATH"
